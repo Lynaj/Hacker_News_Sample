@@ -9,4 +9,3 @@ export default class NoMatch extends React.Component {
         )
     };
 }
-

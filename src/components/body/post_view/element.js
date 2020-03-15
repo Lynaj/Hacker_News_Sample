@@ -5,9 +5,7 @@ export default class PostView extends React.Component {
   render() {
 
     return (
-        <tbody>
-
-        </tbody>
+        <tbody></tbody>
     );
   }
 }
