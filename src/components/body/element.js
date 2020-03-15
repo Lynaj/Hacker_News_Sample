@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Post from './post/element'
+import ExtraBar from './post/extra_bar/element'
 
 export default class Body extends React.Component {
 
@@ -46,23 +47,32 @@ constructor(props) {
     
 
   render() {
+
+
     return (
         <tbody>
-            {this.state.posts.map((post, idx) => (
-                <Post
-                    stageId={idx}
-                    key={post.id}
-                    title={post.title}
-                    by={post.by}
-                    descendants={post.descendants}
-                    id={post.id}
-                    score={post.score}
-                    time={post.time}
-                    title={post.title}
-                    type={post.type}
-                    url={post.url}
-                />
+            {this.state.posts.map((el, idx) => (
+                <Fragment>
+                    <Post
+                        key={el.id}
+                        title={el.title}
+                        by={el.by}
+                        descendants={el.descendants}
+                        id={el.id}
+                        score={el.score}
+                        time={el.time}
+                        title={el.title}
+                        type={el.type}
+                        url={el.url}
+                    />
+                    <ExtraBar
+                        comments={el.kids}
+                        time={el.time}
+                        score={el.score}
+                    />
+                </Fragment>
             ))}
+
         </tbody>
     );
   }
