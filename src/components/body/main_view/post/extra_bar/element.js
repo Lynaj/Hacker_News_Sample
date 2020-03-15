@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Body extends React.Component {
+export default class ExtraBar extends React.Component {
 
     constructor(props) {
         super(props);

@@ -39,11 +39,7 @@ constructor(props) {
             }
         ]
     };
-
-    
-    
-    // this.stagesNames = ['Backlog', 'To Do', 'Ongoing', 'Done'];
-    }
+}
     
 
   render() {

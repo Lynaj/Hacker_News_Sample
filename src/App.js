@@ -1,16 +1,22 @@
 // Components
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+ } from 'react-router-dom';
+
+
+import NoMatch from './components/misc/NoMatch/element.js'
 import Body from './components/body/main_view/element.js'
 import PostView from './components/body/post_view/element.js'
+import CommentsView from './components/body/comments_view/element.js'
 import NavBar from './components/navbar/element.js'
 import Footer from './components/footer/element.js'
-
 import CardContainer from './components/pp/element.js'
-
 
 // Static Files
 import './App.css';
-
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +31,17 @@ class App extends Component {
         <CardContainer />
         <NavBar />  
         <tr id="pagespace" title="Submissions from helpnetsecurity.com" style={{ 'height': '10px' }}></tr>
-        <Body />  
+        
+
+        <Router>
+          <Switch>
+            <Route exact path={"/"} component={Body} >
+                <Route path={"item?id=:id"} component={CommentsView} />
+            </Route>
+            <Route component={NoMatch}/>
+           </Switch>
+        </Router>
+        
         <tr id="pagespace" title="Submissions from helpnetsecurity.com" style={{ 'height': '10px' }}></tr>
         <Footer />
         </tbody>
