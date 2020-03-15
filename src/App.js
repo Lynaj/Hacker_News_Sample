@@ -9,8 +9,6 @@ import Footer from './components/footer/element.js'
 import './App.css';
 
 
-
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -19,10 +17,12 @@ class App extends Component {
   render() {
 
     return (
-      <table id="hnmain" width="85%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f6f6ef">
+      <table id="hnmain" style={{'margin': 'auto' }} width="85%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f6f6ef">
         <tbody>
         <NavBar />  
+        <tr id="pagespace" title="Submissions from helpnetsecurity.com" style={{ 'height': '10px' }}></tr>
         <Body />  
+        <tr id="pagespace" title="Submissions from helpnetsecurity.com" style={{ 'height': '10px' }}></tr>
         <Footer />
         </tbody>
       </table>
