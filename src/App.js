@@ -1,6 +1,7 @@
 // Components
 import React, { Component } from 'react';
-import Body from './components/body/element.js'
+import Body from './components/body/main_view/element.js'
+import PostView from './components/body/post_view/element.js'
 import NavBar from './components/navbar/element.js'
 import Footer from './components/footer/element.js'
 

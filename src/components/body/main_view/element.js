@@ -48,7 +48,6 @@ constructor(props) {
 
   render() {
 
-
     return (
         <tbody>
             {this.state.posts.map((el, idx) => (
@@ -66,6 +65,7 @@ constructor(props) {
                         url={el.url}
                     />
                     <ExtraBar
+                        id={el.id}
                         comments={el.kids}
                         time={el.time}
                         score={el.score}
