@@ -8,7 +8,8 @@ export default class Comment extends React.Component {
             converted_date: "14 minutes ago",
             text: this.props.text,
             author: this.props.author,
-            id: this.props.id
+            id: this.props.id,
+            indentation_value: this.props.indentation_value
         }
     }
 
@@ -20,7 +21,7 @@ export default class Comment extends React.Component {
                         <tbody>
                             <tr>
                                 <td class="ind">
-                                    <img src="s.gif" width="{ indentation_value }" height="1" />
+                                    <img src="s.gif" width={ this.state.indentation_value } height="1" />
                                 </td>
                                 <td class="votelinks" valign="top">
                                     <center>
@@ -31,7 +32,7 @@ export default class Comment extends React.Component {
                                     </center>
                                 </td>
                                 <td class="default">
-                                    <div style="margin-top:2px; margin-bottom:-10px;">
+                                    <div style={{ 'margin-top':'2px', 'margin-bottom':'-10px'}}>
                                         <span class="comhead">
                                             <a href="user?id=Dowwie" class="hnuser">
                                                 { this.state.author }
