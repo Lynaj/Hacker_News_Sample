@@ -1,5 +1,22 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+
+function BarExtension(props) {
+
+    const calculate_props_vaue = () => {
+        return props.value + 2
+    }
+
+
+    const [why, tellme] = useState(15);
+
+
+    return (
+        <Fragment>
+            hello world { calculate_props_vaue }
+        </Fragment>
+    )
+}
 
 export default class ExtraBar extends React.Component {
 
@@ -29,21 +46,20 @@ export default class ExtraBar extends React.Component {
                             by 
                         <a href="user?id=pseudolus" class="hnuser">
                             pseudolus
-                        </a> <span class="age"><a href="item?id={this.props.id}">
+                        </a> <span class="age"><a href="item/{this.props.id}">
                             1 hour ago
                         </a></span> <span id="unv_{this.props.id}"></span> 
                             |
-                        <a href="hide?id={this.props.id}&amp;goto=news">
+                        <a href={`item/${this.props.id}`}>
                             hide
                         </a> 
                             |
-                        <a href="item?id={this.props.id}">
+                        <a href={`item/${this.props.id}`}>
                             discuss
                         </a>              
                         |
-                        <a href="item?id={this.props.id}">
-                            { number_of_comments }
-                            comments
+                        <a href={`item/${this.props.id}`}>
+                            { number_of_comments }  comments
                         </a>
                     </td>
                 </tr>
