@@ -18,6 +18,28 @@ import Footer from './components/footer/element.js'
 // Static Files
 import './App.css';
 
+
+function newsComponent(props) {
+  return (
+    <div>
+      News
+    </div>
+  )
+}
+
+const newsCOmponentConst = () => {
+
+  const local_value = () => {
+    return 15
+  };
+
+  window.map = this;
+  
+  return (
+    <div> Newwwss neww { local_value() } </div>
+  )
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -33,9 +55,15 @@ class App extends Component {
        
         <Router>
           <Switch>
-            <Route path={"/item/:id"} component={CommentsView} />
+
+            <Route path={"/item"} component={CommentsView}>
+              <Route path={"/item/:id"} component={newsComponent} />
+            </Route>
+
+            <Route path={"/news"} component={newsCOmponentConst} />
             <Route path={"/"} component={Body} />
             <Route component={NoMatch}/>
+
           </Switch>
         </Router>
 
