@@ -23,23 +23,23 @@ export default class NavBar extends React.Component {
                     <td style={{ 'line-height':'12pt', 'height': '10px' }}>
                       <span class="pagetop">
                         <b class="hnname">
-                          <a href="news">
+                          <a href="/news">
                             Hacker News
                           </a>
                         </b>
-                        <a href="newest">new</a>
+                        <a href="/newest">new</a>
                           |
-                        <a href="front">past</a>
+                        <a href="/front">past</a>
                           |
-                        <a href="newcomments">comments</a>
+                        <a href="/newcomments">comments</a>
                           |
-                        <a href="ask">ask</a>
+                        <a href="/ask">ask</a>
                           |
-                        <a href="show">show</a>
+                        <a href="/show">show</a>
                           |
-                        <a href="jobs">jobs</a>
+                        <a href="/jobs">jobs</a>
                           |
-                        <a href="submit">submit</a>
+                        <a href="/submit">submit</a>
                           |
                         <font color="#ffffff">from</font>
                       </span>

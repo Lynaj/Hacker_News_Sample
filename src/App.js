@@ -34,15 +34,10 @@ class App extends Component {
        
         <Router>
           <Switch>
-
-            <Route path={"/item"} component={CommentsView}>
-              <Route path={"/item/:id"} component={newsComponent} />
-            </Route>
-
-            <Route path={"/news"} component={newsCOmponentConst} />
+            <Route path={"/item/:id"} component={CommentsView} />
+            <Route path={"/test"} component={TestComponent} />
             <Route path={"/"} component={Body} />
             <Route component={NoMatch}/>
-
           </Switch>
         </Router>
 
