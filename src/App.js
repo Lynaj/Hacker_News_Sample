@@ -1,5 +1,5 @@
 // Components
-import React, { Component } from 'react';
+import React, { Component, useState, Fragment} from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -9,6 +9,7 @@ import {
 
 
 import NoMatch from './components/misc/NoMatch/element.js'
+import TestComponent from './components/misc/TestComponent/element.js'
 import Body from './components/body/main_view/element.js'
 import PostView from './components/body/post_view/element.js'
 import CommentsView from './components/body/comments_view/element.js'
@@ -17,28 +18,6 @@ import Footer from './components/footer/element.js'
 
 // Static Files
 import './App.css';
-
-
-function newsComponent(props) {
-  return (
-    <div>
-      News
-    </div>
-  )
-}
-
-const newsCOmponentConst = () => {
-
-  const local_value = () => {
-    return 15
-  };
-
-  window.map = this;
-  
-  return (
-    <div> Newwwss neww { local_value() } </div>
-  )
-}
 
 class App extends Component {
   constructor(props) {
@@ -74,5 +53,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
