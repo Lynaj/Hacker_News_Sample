@@ -62,7 +62,7 @@ export default class CommentsView extends React.Component {
                 {
                     "by" : "SwellJoe",
                     "id" : 192302,
-                    "parent" : 2921980,
+                    "parent" : 2921933,
                     "text" : "I never understand these text editor questions that come up every few days on every site about hacking.<p>There are two text editors: vim and emacs<p>Editing text is a solved problem.  Pick one, and get back to work.",
                     "time" : 1210979615,
                     "indentation_value": 0,

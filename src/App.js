@@ -33,7 +33,7 @@ class App extends Component {
        
         <Router>
           <Switch>
-            <Route path={"/hello"} component={Body} />
+            <Route path={"/"} component={Body} />
             <Route path={"/item"} component={CommentsView} />
             <Route component={NoMatch}/>
           </Switch>
